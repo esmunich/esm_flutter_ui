@@ -30,7 +30,7 @@ class _TextFieldPasswordState extends State<TextFieldPassword> {
             width: mediaQuery.width * 0.6,
             child: Padding(
               padding: const EdgeInsets.only(
-                left: 32,
+                left: 16,
               ),
               child: TextField(
                 cursorColor: theme.colorScheme.surface,
