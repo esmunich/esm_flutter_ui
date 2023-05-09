@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
-class TextFieldPassword extends StatefulWidget {
+class EsmPasswordTextField extends StatefulWidget {
   final double? width;
   final TextEditingController? textEditingController;
   final String? hintText;
-  const TextFieldPassword(
+  const EsmPasswordTextField(
       {super.key, this.width, this.textEditingController, this.hintText});
 
   @override
-  State<TextFieldPassword> createState() => _TextFieldPasswordState();
+  State<EsmPasswordTextField> createState() => _EsmPasswordTextFieldState();
 }
 
-class _TextFieldPasswordState extends State<TextFieldPassword> {
+class _EsmPasswordTextFieldState extends State<EsmPasswordTextField> {
   late final theme = Theme.of(context);
   late final mediaQuery = MediaQuery.of(context).size;
   late var hidePassword = true;

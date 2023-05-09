@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
-class TextFieldUsername extends StatefulWidget {
+class EsmTextField extends StatefulWidget {
   final double? width;
   final TextEditingController? textEditingController;
   final String? hintText;
-  const TextFieldUsername({
+  const EsmTextField({
     super.key,
     this.width,
     this.textEditingController,
@@ -14,10 +14,10 @@ class TextFieldUsername extends StatefulWidget {
   });
 
   @override
-  State<TextFieldUsername> createState() => _TextFieldUsernameState();
+  State<EsmTextField> createState() => _EsmTextFieldState();
 }
 
-class _TextFieldUsernameState extends State<TextFieldUsername> {
+class _EsmTextFieldState extends State<EsmTextField> {
   late final theme = Theme.of(context);
   late final mediaQuery = MediaQuery.of(context).size;
   @override
