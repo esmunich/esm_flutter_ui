@@ -26,21 +26,17 @@ class _EsmIconTextButtonState extends State<EsmIconTextButton> {
   late bool isPressed = false;
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTapDown: (details) {
+    return TextButton(
+      style: TextButton.styleFrom(
+          minimumSize: Size.zero,
+          padding: EdgeInsets.zero,
+          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+          splashFactory: widget.clickable
+              ? InkRipple.splashFactory
+              : NoSplash.splashFactory),
+      onPressed: () {
         if (widget.clickable) {
           widget.onPressed();
-          setState(() {
-            elevation = 2.0;
-          });
-        }
-      },
-      onTapUp: (details) async {
-        if (widget.clickable) {
-          await Future.delayed(const Duration(milliseconds: 250));
-          setState(() {
-            elevation = 4.0;
-          });
         }
       },
       child: EsmCard(
