@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
 class EsmTextField extends StatefulWidget {
   final double? width;
   final TextEditingController? textEditingController;
+  final TextInputType? textInputType;
   final String? hintText;
+
   const EsmTextField({
     super.key,
     this.width,
     this.textEditingController,
     this.hintText,
+    this.textInputType,
   });
 
   @override
@@ -35,7 +39,7 @@ class _EsmTextFieldState extends State<EsmTextField> {
           style: theme.textTheme.displaySmall?.copyWith(
             fontSize: mediaQuery.height * 0.03,
           ),
-          keyboardType: TextInputType.number,
+          keyboardType: widget.textInputType ?? TextInputType.name,
           textAlign: TextAlign.center,
           decoration: InputDecoration(
               hintStyle: TextStyle(
