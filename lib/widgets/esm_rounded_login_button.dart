@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class EsmRoundedButton extends StatefulWidget {
   final VoidCallback onPressed;
   final String? displayText;
+  final Color? textAndBorderColor;
   const EsmRoundedButton(
-      {super.key, required this.onPressed, this.displayText});
+      {super.key,
+      required this.onPressed,
+      this.displayText,
+      this.textAndBorderColor});
 
   @override
   State<EsmRoundedButton> createState() => _EsmRoundedButtonState();
@@ -24,7 +26,8 @@ class _EsmRoundedButtonState extends State<EsmRoundedButton> {
           mediaQuery.width * 0.1,
         ),
         border: Border.all(
-            color: theme.colorScheme.primary, width: mediaQuery.width * 0.01),
+            color: widget.textAndBorderColor ?? theme.colorScheme.primary,
+            width: mediaQuery.width * 0.01),
         color: Colors.transparent,
       ),
       child: Padding(
@@ -34,7 +37,8 @@ class _EsmRoundedButtonState extends State<EsmRoundedButton> {
           child: Text(widget.displayText ?? "",
               style: theme.textTheme.displaySmall?.copyWith(
                   fontSize: mediaQuery.height * 0.03,
-                  color: theme.colorScheme.primary)),
+                  color:
+                      widget.textAndBorderColor ?? theme.colorScheme.primary)),
         ),
       ),
     );
