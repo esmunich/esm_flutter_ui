@@ -23,11 +23,11 @@ TextTheme lightTextTheme = TextTheme(
   displaySmall: GoogleFonts.urbanist(
       color: lightTheme.colorScheme.surface, fontWeight: FontWeight.bold),
   titleLarge: GoogleFonts.urbanist(
-      color: lightTheme.primaryColor,
+      color: lightTheme.colorScheme.primary,
       fontWeight: FontWeight.bold,
       fontSize: 25),
   titleSmall: GoogleFonts.urbanist(
-      color: lightTheme.primaryColor,
+      color: lightTheme.colorScheme.primary,
       fontWeight: FontWeight.bold,
       fontSize: 17),
 );

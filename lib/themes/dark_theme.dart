@@ -23,7 +23,11 @@ TextTheme darkTextTheme = TextTheme(
   displaySmall: GoogleFonts.urbanist(
       color: darkTheme.colorScheme.surface, fontWeight: FontWeight.bold),
   titleLarge: GoogleFonts.urbanist(
-      color: darkTheme.primaryColor, fontWeight: FontWeight.bold, fontSize: 25),
+      color: darkTheme.colorScheme.primary,
+      fontWeight: FontWeight.bold,
+      fontSize: 25),
   titleSmall: GoogleFonts.urbanist(
-      color: darkTheme.primaryColor, fontWeight: FontWeight.bold, fontSize: 17),
+      color: darkTheme.colorScheme.primary,
+      fontWeight: FontWeight.bold,
+      fontSize: 17),
 );
