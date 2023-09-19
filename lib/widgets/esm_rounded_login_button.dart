@@ -23,7 +23,7 @@ class _EsmRoundedButtonState extends State<EsmRoundedButton> {
       width: mediaQuery.width * 0.7,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(
-          mediaQuery.width * 0.1,
+          mediaQuery.width * 0.7,
         ),
         border: Border.all(
             color: widget.textAndBorderColor ?? theme.colorScheme.primary,
